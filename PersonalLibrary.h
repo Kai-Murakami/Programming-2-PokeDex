@@ -9,7 +9,7 @@ class PokemonLibrary
 {  
 private:
 
-    string id;
+    int id;
     string name;
     string type;
     int total;
@@ -22,7 +22,7 @@ private:
 
 public: 
 
-        PokemonLibrary(string name2, string type2, string id2, int total2, int hp2, int atk2, int def2, int spatk2, int spdef2, int speed2)
+        PokemonLibrary(string name2, string type2, int id2, int total2, int hp2, int atk2, int def2, int spatk2, int spdef2, int speed2)
     : name(name2), type(type2), id(id2), hp(hp2), atk(atk2), def(def2),spatk(spatk2), spdef(spdef2), speed(speed2)
 {
     total = hp + atk + def + spatk + spdef + speed;
@@ -71,11 +71,11 @@ int getSpeed() const
 {
     return speed;
 }
-string getID() const
+int getID() const
 {
     return id;
 }
-void setID(const string& newID)
+void setID(const int& newID)
 {
     id = newID;
 }
@@ -133,7 +133,8 @@ class Pokedex
     public:
         void addPokemon(const PokemonLibrary& pokemon)
         {
-            string newID = pokemon.getID();
+            using namespace std::chrono;
+            int newID = pokemon.getID();
         
             vector<PokemonLibrary>::iterator it = pokemons.begin();
 
@@ -142,6 +143,7 @@ class Pokedex
                 it++;
             }
             pokemons.insert(it,pokemon);
+            std::this_thread::sleep_for(seconds(3));
         }
         void listPokemons() const
         {
@@ -152,9 +154,10 @@ class Pokedex
                 std::this_thread::sleep_for(seconds(3));
             }
       else{
+            cout<<"\n===============================\n*** Personal Pokedex Library ***\n==============================="<<endl;
             for (int i = 0; i < pokemons.size(); i++)
             {
-                cout<<"\n\n\nHere is your list of pokemon: "<<endl;
+    
                 cout<<"ID: "<<pokemons[i].getID()<<" | Name: "<<pokemons[i].getName()<<" | Type: "<<pokemons[i].getType()<<" | Total: "<<pokemons[i].getTotal()<<" | HP: "<<pokemons[i].getHp()<<" | Attack: "<<pokemons[i].getAtk()<<" | Defense: "<<pokemons[i].getDef()<<" | Special Attack: "<<pokemons[i].getSpatk()<<" | Special Defense: "<<pokemons[i].getSpdef()<<" | Speed: "<<pokemons[i].getSpeed()<<endl;
             }     
           }
