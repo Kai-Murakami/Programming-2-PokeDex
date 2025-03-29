@@ -1,0 +1,49 @@
+Overgrow: Bulbasaur, Ivysaur, Venusaur, Treecko, Grovyle, Sceptile, Turtwig, Grotle, Torterra
+AbilityDescription: Boosts Grass-type moves when HP is low.
+StrongAgainst: Torrent
+WeakAgainst: Blaze
+
+Blaze: Charmander, Charmeleon, Charizard, Cyndaquil, Quilava, Typhlosion, Torchic, Combusken, Blaziken, Chimchar, Monferno, Infernape
+AbilityDescription: Boosts Fire-type moves when HP is low.
+StrongAgainst: Overgrow
+WeakAgainst: Torrent
+
+Torrent: Squirtle, Wartortle, Blastoise, Totodile, Croconaw, Feraligatr, Mudkip, Marshtomp, Swampert, Piplup, Prinplup, Empoleon
+AbilityDescription: Boosts Water-type moves when HP is low.
+StrongAgainst: Blaze
+WeakAgainst: Overgrow
+
+Intimidate: Arbok, Gyarados, Ekans, Staraptor, Salamence, Luxray, Mawile, Granbull
+AbilityDescription: Lowers the opponent’s Attack when entering battle.
+StrongAgainst: None
+WeakAgainst: None
+
+Levitate: Gengar, Haunter, Koffing, Weezing, Bronzor, Bronzong, Rotom, Flygon
+AbilityDescription: Makes the Pokemon immune to Ground-type moves.
+StrongAgainst: Ground-type moves
+WeakAgainst: None
+
+Static: Pikachu, Raichu, Electrike, Manectric, Ampharos, Electivire
+AbilityDescription:Chance to paralyze opponent on contact
+StrongAgainst: Water-type Pokemon
+WeakAgainst: Ground-type Pokemon
+
+Shadow Tag: Wobbuffet, Wynaut, Gothitelle
+AbilityDescription:Prevents opponents from switching out
+StrongAgainst: None
+WeakAgainst: Ghost-type Pokemon
+
+Flame Body: Magmar, Magmortar, Volcarona, Litwick, Lampent, Chandelure
+AbilityDescription:May burn opponents on contact
+StrongAgainst: Grass and Bug Pokemon
+WeakAgainst: Water Pokemon
+
+Sturdy: Geodude, Graveler, Golem, Onix, Steelix, Forretress, Magnezone
+AbilityDescription:Prevents one-hit KO moves from working
+StrongAgainst: One-hit KO moves
+WeakAgainst: None
+
+Speed Boost: Blaziken, Yanmega, Ninjask
+AbilityDescription:Gradually increases Speed each turn
+StrongAgainst: Slow Pokemon
+WeakAgainst: Priority moves (e.g., Quick Attack, Extreme Speed)
