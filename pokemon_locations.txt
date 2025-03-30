@@ -1,0 +1,16 @@
+Pallet Town,normal/flying,None,trainer school,1,0
+Viridian City,grass/bug,Earth Badge,forest exploration,1,0
+Pewter City,rock/ground,Boulder Badge,museum exhibits,1,0
+Cerulean City,water/psychic,Cascade Badge,bike path,2,0
+Vermilion City,electric/steel,Thunder Badge,S.S. Anne cruise,1,1
+Lavender Town,ghost/poison,None,Pokemon Tower memorial,1,0
+Celadon City,grass/poison,Rainbow Badge,department store/game corner,2,1
+Fuchsia City,poison/bug,Soul Badge,safari zone,1,0
+Saffron City,psychic/fighting,Marsh Badge,fighting dojo,2,0
+Cinnabar Island,fire/rock,Volcano Badge,pokemon lab/mansion ruins,1,1
+Indigo Plateau,dragon/ice,None,pokemon league championship,3,0
+Mt. Moon,rock/ground/fairy,None,fossil hunting,0,0
+Rock Tunnel,rock/electric/ground,None,spelunking,0,0
+Seafoam Islands,water/ice,None,ice cave exploration,0,0
+Power Plant,electric/steel,None,abandoned facility exploration,0,0
+Victory Road,rock/fighting/dragon,None,trainer battles/cave exploration,1,0
