@@ -26,7 +26,7 @@ public:
 
 class PokemonDatabase {
 private:
-    vector<pair<string, AbilityData>> abilities;
+    vector<pair<string, AbilityData> > abilities;
 
     string trim(const string& str) {
         size_t first = str.find_first_not_of(" \t");
