@@ -182,7 +182,8 @@ int Entered_choice;
 
 
 // This part will always be executed because it opens the text files
-cout << "Enter the generation number: " << endl;
+cout<<"======================================\n*** Welcome To The Pokedex Search ***\n======================================\n\n";
+cout << "Enter the generation you would like to search from: ";
 cin >> Entered_generation;
 Pokemon Pokemon(Entered_generation);
 
@@ -193,22 +194,25 @@ Pokemon.import_from_file();
 // the below text is asking the user what he/she wants to do with the data,
 // either to search for specific pokemon or ouput all pokemon in a specified generation 
 
-cout << "Please choose from the menu below what you like to do with Pokemon data " << endl<<endl;
-cout << "If you want to search specific Pokemon press 1." << endl<< endl;
-cout << "If you want to filter and output the whole pokemon in a specific generation press 2." << endl;
+cout << "\n\n\n========================\n*** Search Functions ***\n========================" << endl;
+cout << "1. Specific search"<< endl;
+cout << "2. Filter search" << endl;
 // it recives the choice 
+cout<<"Enter choice: ";
 cin >> Entered_choice;
 
 // based on the user's choice it proceds here 
 if (Entered_choice == 1){
-cout << "Enter the specific pokimon's name: "<< endl;
+cout <<"\nEnter the specific pokimon's name: ";
 cin >> Entered_name;
+cout<<endl<<endl;
 Pokemon.find_pokemon(Entered_name);   // this function will search/find the specific pokemon
 }
 
 else if(Entered_choice == 2){
-cout << "Please Enter the generation number: " << endl;
+cout << "Please Enter the generation number: ";
 cin >> generation_u_want_to_filter;
+cout<<"\n\n===================================================\n*** Here is a list of pokemon from generation "<<generation_u_want_to_filter<<" ***\n===================================================\n";
 Pokemon.filter_by_generation(generation_u_want_to_filter); // this function will output all the pokemon's from the chosen generation 
 }
 }
@@ -406,12 +410,13 @@ void map()
 
 void showMenu() 
 {
-    cout << "\n=== Pokedex ===" << endl;
+    cout << "\n===============\n*** Pokedex ***\n===============" << endl;
     cout << "1. Search" << endl;
     cout << "2. Ability Search" << endl;
     cout << "3. Personal Library" << endl;
     cout << "4. Map" << endl;
     cout << "5. Exit" << endl;
+    cout<<"Enter Choice: ";
 }
 
 int main() 
