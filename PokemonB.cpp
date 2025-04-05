@@ -8,34 +8,53 @@ Pokemon::Pokemon (string Entered_generation){
     filename = "Generation" + Entered_generation + ".txt";
 }
 
-
 // import data from text file to vectors 
-void Pokemon::import_from_file(){
+// Import data from text file to vectors using pointers
+void Pokemon::import_from_file() {
     ifstream input;
-    input.open(filename);   // this will open the file 
+    input.open(filename); // Open the file
 
-    if(input.fail()){       // if the text file fails to open it will display the ff 
+    if (input.fail()) { // Check if the file failed to open
         cout << "File does not exist" << endl;
         cout << "Exit program" << endl;
+        return;
     }
 
-       // this part of the function imports data from the text file to vectors until it reaches the end of the file 
-    while (!input.eof()) {
     
-        getline(input, Index, ','); 
-        vector_index.push_back(Index);
-        getline(input, Name, ','); 
-        vector_name.push_back(Name);
-        getline(input, Type_1, ','); 
-        vector_Type_1.push_back(Type_1);
-        getline(input, Type_2, ',');
-        vector_Type_2.push_back(Type_2);
-        getline(input, Extra_numbers);
-        vector_Extra_numbers.push_back(Extra_numbers);
-    }
+    // Pointers for temporary pokemon storage
+    string* Index = new string;
+    string* Name = new string;
+    string* Type_1 = new string;
+    string* Type_2 = new string;
+    string* Extra_numbers = new string;
 
-input.close();
-}     
+    // Reads data from the text file
+    while (!input.eof()) {
+        getline(input, *Index, ',');
+        vector_index.push_back(*Index);
+
+        getline(input, *Name, ',');
+        vector_name.push_back(*Name);
+
+        getline(input, *Type_1, ',');
+        vector_Type_1.push_back(*Type_1);
+
+        getline(input, *Type_2, ',');
+        vector_Type_2.push_back(*Type_2);
+
+        getline(input, *Extra_numbers);
+        vector_Extra_numbers.push_back(*Extra_numbers);
+    }
+    // deleting the allocated memory to free space
+    delete Index;
+    delete Name;
+    delete Type_1;
+    delete Type_2;
+    delete Extra_numbers;
+
+    input.close();
+    cout << "Data imported successfully." << endl;
+}
 
 // the below function finds the specified pokemon and outputs them
 void Pokemon::find_pokemon(string Entered_name){
